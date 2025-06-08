@@ -5,28 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/themify-icons/1.0.1/css/themify-icons.css">
 </head>
 
 <body>
     <div id="main">
     <div class="Header">
-        <div class="header-up">Welcome to Music Festival 2025</div>
-        <div class="header-low">
-        <div class="header-home">Festiva Live</div>
-        <div class="header-menu">
-            <ul>
+        <div class="header-up"><i style="width: 20px;" class="ti-arrow-up">Welcome to Music Festival 2025</i></div>
+        <nav class="navbar">
+            <div class="navdiv">
+        <div class="logo">
+            <a href="#">Festiva Live</a>
+          </div>
+       <ul class="nav-menu">
                 <li><a href="">Home</a></li>
                 <li><a href="">About</a></li>
                 <li><a href="">Artist</a></li>
                 <li><a href="">Schedule</a></li>
                 <li><a href="">Pricing</a></li>
-                <li><a href="">Cọntact</a></li>
+                <li><a href="">Contact</a></li>
+              <button class="nav-search"><a href="#">Buy Ticket</a></button>
+         
             </ul>
-        </div>
-        <div class="header-buy">
-           <button class="header-btn">Buy Ticket</button>
-        </div>
-        </div> 
+         </div>
+       </nav> 
     </div>
     <div class="container">
        
@@ -41,8 +43,10 @@
             <a  href="">Lets Begin</a>
           
         </div>
-        <div>
-            <a>dadds</a>
+        <div class="slider-description">
+            <h3> <i class="ti-alarm-clock"></i>10 - 12th, Dec 2025</h3>
+            <h3>National Center, United States</h3>
+            <div class="slider-share">Share:</div>
         </div>
     </div>   
 
@@ -54,6 +58,16 @@
     <div>Footer</div>   
     </div>
    
-   
+   <script>
+    let lastScrolly = window.scrollY;
+    const header = document.querySelector(".Header");
+    window.addEventListener("scroll",()=>{
+        if(window.scrollY >50){
+            header.classList.add("scrolled");
+        }else{
+            header.classList.remove("scrolled");
+        }
+    });
+   </script>
 </body>
 </html>

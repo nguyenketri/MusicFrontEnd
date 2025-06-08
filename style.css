@@ -4,46 +4,80 @@
     margin: 0;
 }
 .Header{
-    display: flex;
-    flex-direction:column;
+  position: relative;
 }
-.Header .header-up{
-    background-color: yellow;
-    min-height: 50px;
+.header-up{
+    background-color: aqua;
+    height: 50px;
     padding-left: 100px;
-    padding-top:20px;
-    font-weight: 700;
-    font-size:16px;
-    font-family:'Outfit', sans-serif;
+    padding-top: 16px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: 20px;
+    transition: all 0.3s ease;
 }
-.header-low{
-    display:flex;
-    justify-content:space-around;
-    align-items: center;
-    background-color: #111;
-    height: 80px;
-    color: #fff;
-    font-family:'Outfit', sans-serif;
+.Header.scrolled .header-up{
+    height: 0;
+    padding: 0;
+    opacity: 0;
+    overflow: hidden;
 }
-.header-menu ul{
+.navbar{
+  background-color: aquamarine;
+  font-family:calibri;
+  color: #fff;
+  padding-left: 100px;
+  padding-right: 100px;
+   width: 100%;
+    overflow: hidden;
+    position: fixed;
+  top:50px;
+    z-index: 999;
+    transition: top 0.3s ease;
+}
+.navdiv{
     display: flex;
-    margin-left: 100px;
-    gap: 25px;
-    list-style-type: none;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+   
 }
-.header-menu ul a{
+.Header.scrolled .navbar{
+    top:0;
+}
+
+.navdiv .logo a{
+   font-size :30px;
+   color: #fff;
+   font-weight: 600;
+   text-decoration: none;
+}
+.navdiv li{
+    display: inline-block;
+    list-style: none;
+   
+}
+.navdiv .nav-menu a{
     text-decoration: none;
-    color:#fff;
+    margin-right: 45px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
 }
-.header-btn{
-   border-radius:20px;
-   color:#fff;
-   background-color:orange;
-   height: 40px;
-   width: 100px;
-   font-family:'Outfit', sans-serif;
-   font-size: 15px;
+.nav-search {
+    border-radius:20px;
+    background-color:red ;
+    padding: 3px;
+    padding-left: 40px;
+
 }
+.nav-search:hover {
+   background-color: aqua;
+   
+}
+
+
+
 .slider{
     position: relative;
     width: 100%;
@@ -58,12 +92,14 @@
 
 .overlay-text {
       position: absolute;
-      top: 30%;
-      left: 45%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
       color: red;
       font-weight: bold;
+      width: 100%;
       z-index: 1; /* cao hơn phần ví dụ để đè lên */
-     
+      box-sizing: border-box;
 }
 .slider-content{
     display: flex;
@@ -71,8 +107,10 @@
     justify-content: center;
     align-items: center;
     height: 300px;
-    width: 300px;
+    width: 100%;
     color: #fff;
+   gap: 30px;
+   margin-top: 140px;
 }
 .slider-content a{
     text-decoration: none;
@@ -84,4 +122,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+.slider-content a:hover{
+    background-color: aqua;
+}
+.slider-content h1{
+  font-size: 62px;
+  font-weight: 600;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.slider-content small{
+   font-size: 16px;
+}
+.slider-description{
+    display:flex;
+    justify-content: space-between;
+    overflow: hidden;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: sans-serif;
+    padding-top: 300px;
 }
