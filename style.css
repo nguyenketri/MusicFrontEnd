@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.Header{
+    display: flex;
+    flex-direction:column;
+}
+.Header .header-up{
+    background-color: yellow;
+    min-height: 50px;
+    padding-left: 100px;
+    padding-top:20px;
+    font-weight: 700;
+    font-size:16px;
+    font-family:'Outfit', sans-serif;
+}
+.header-low{
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    background-color: #111;
+    height: 80px;
+    color: #fff;
+    font-family:'Outfit', sans-serif;
+}
+.header-menu ul{
+    display: flex;
+    margin-left: 100px;
+    gap: 25px;
+    list-style-type: none;
+}
+.header-menu ul a{
+    text-decoration: none;
+    color:#fff;
+}
+.header-btn{
+   border-radius:20px;
+   color:#fff;
+   background-color:orange;
+   height: 40px;
+   width: 100px;
+   font-family:'Outfit', sans-serif;
+   font-size: 15px;
+}
+.slider{
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    border:1px solid #ccc;
+    overflow: hidden;
+}
+.slider video{
+    width: 100%;
+    
+}
+
+.overlay-text {
+      position: absolute;
+      top: 30%;
+      left: 45%;
+      color: red;
+      font-weight: bold;
+      z-index: 1; /* cao hơn phần ví dụ để đè lên */
+     
+}
+.slider-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 300px;
+    color: #fff;
+}
+.slider-content a{
+    text-decoration: none;
+    color: #fff;
+    border-radius: 20px;
+    background-color: greenyellow;
+    height: 30px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
